@@ -14,9 +14,9 @@ function getPosition(){
     	if(hash == '#services')
 	    position = '-6.6em';
 	else if(hash == '#projects')
-	    position = '-5.2em';
+	    position = '-5.3em';
 	else if(hash == '#contact')
-	    position = '-3.8em';
+	    position = '-3.9em';
 	else if(hash == '#jobs')
 	    position = '-2.6em';
     return position;

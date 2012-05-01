@@ -47,6 +47,7 @@ p {
    font-family: Helvetica, sans-serif;
    color: #333;
    line-height: 1.8em;
+   margin: 2em 0;
 }
 
 h1{
@@ -80,7 +81,7 @@ ul{
     padding: 0.5em 0 0.8em 1.3em;
 }
 div#content{
-    margin: 0 2em 2em 13em;
+    margin: 0 2.5em 3em 13.5em;
     min-width: 25em;
     max-width: 50em;
 }
@@ -96,7 +97,7 @@ img{
 }
 img#logo{
     opacity: 0.4;
-    padding: 0.6em 0 0 1em;
+    padding: 0.8em 0 0 1em;
 }
 img#indicator{
     position: absolute;
