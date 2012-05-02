@@ -55,6 +55,7 @@ h1{
     font-weight: bold;
     padding: 2.9em 0 0 0;
     margin: 0 0 0.8em 0;
+    clear: left;
 }
 h3{
     font-size: 1.4em;
@@ -80,20 +81,30 @@ ul{
     list-style: none;
     padding: 0.5em 0 0.8em 1.3em;
 }
+div{
+    overflow:auto;
+}
 div#content{
-    margin: 0 2.5em 3em 13.5em;
+    margin: 0 auto;
     min-width: 25em;
-    max-width: 50em;
+    max-width: 42em;
 }
 div#emptyspace{
-    padding:25em 0;
+    padding: 25em 0;
 }
 div#bigFatContainer{
-    margin: 0 auto;
+    margin: 0 2.5em 3em 13.5em;
+
+}
+
+div.projectBox{
+    float: left;
+    margin: 0 4em 3em 0;
+    text-align: center;
 }
 
 img{
-    border-radius: 2px;
+    border-radius: 3px;
 }
 img#logo{
     opacity: 0.4;
