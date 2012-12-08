@@ -1,11 +1,57 @@
 $(document).ready(function(){
-    $('#navigation').localScroll({duration:800, hash:true});
+    // Since no new elements are fetched via AJAX.
+    // Only traverse the DOM for these objects once.
+    var bigFat = $('#bigFatContainer');
+    var navigation = $('#navigation');
+    var mobileHeader = $('#mobileHeader');
+    var indicator = $('#indicator');
+
+    // Place the indicator in the right position at page load.
+    indicator.css({marginTop: getPosition()});
+    // Set some settings in the localscroll plugin.
+    navigation.localScroll({duration:800, hash:true});
 
     $(window).hashchange( function(){
 	position = getPosition();
-	$('#indicator').animate({marginTop: position});
+	indicator.animate({marginTop: position},function(){
+	    // If a phone is viewing the page.
+	    if(mobileHeader.css('display') != 'hidden'){
+		closeMenuOnMobile(400);
+	    }
+	});
     });
-    $('#indicator').css({marginTop: getPosition()});
+
+    // Opening the menu on phones or small screens.
+    $('.menuButton').click(function(){
+	if(bigFat.css('left') != '155px') {
+	    openMenuOnMobile();
+	}
+    });
+
+    // Clicking anywhere but the menu when the menu
+    // is open closes the menu.
+    bigFat.click(function(){
+	if(bigFat.css('left') == '155px'){
+	    closeMenuOnMobile();
+	}
+    });
+
+    function openMenuOnMobile(time){
+	if(time == undefined){
+	    time = 200;
+	}
+//	bigFat.css('-webkit-transform', 'translateX(155px)');
+	bigFat.animate({left: '155px'}, time);
+	mobileHeader.animate({left: '155px'}, time);
+
+    }
+    function closeMenuOnMobile(time){
+	if(time == undefined)
+	    time = 200;
+//	bigFat.css('-webkit-transform', 'translateX(0px)');
+	bigFat.animate({left: '0px'}, time);
+	mobileHeader.animate({left: '0px'}, time);
+    }
 });
 
 function getPosition(){
@@ -21,3 +67,5 @@ function getPosition(){
 	    position = '-2.6em';
     return position;
 }
+
+

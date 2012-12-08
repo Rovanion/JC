@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title> JC Design - Interactive Webdevelopment</title>
     
     <link rel="icon" type="image/png" href="./img/favicon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" media="all" href="./css/main.css" /> 
     
     <script type="text/javascript" src="./js/jquery.js"></script>
@@ -17,19 +18,29 @@
   </head>
 
   <body>
-      <div id="navigation">
-	<img id="logo" src="./img/jc.png" alt="Company Logo"/>
-	<ul>
-	  <li><a href="#services">Services</a></li>
-	  <li><a href="#projects">Projects</a></li>
-	  <li><a href="#contact">Contact</a></li>
-	  <li><a href="#jobs">Jobs</a></li>
-	</ul>
-	<img id="indicator" src="./img/indicator.png" alt="">
-      </div>
-<div id="bigFatContainer">
+    <div id="navigation">
+      <img id="logo" src="./img/jc.png" alt="Company Logo"/>
+      <ul>
+	<li><a href="#services">Services</a></li>
+	<li><a href="#projects">Projects</a></li>
+	<li><a href="#contact">Contact</a></li>
+	<li><a href="#jobs">Jobs</a></li>
+      </ul>
+      <img id="indicator" src="./img/indicator.png" alt="">
+    </div>
+    <div id="bigFatContainer">
+      <ul id="mobileHeader">
+	<li class="ib pointer menuButton">
+	  <img src="./img/menu.png" alt="Menu icon"/>
+	  <h3 class="ib"> Menu </h3> 
+	</li>
+	<li class="ib" alt="Company Logo">
+	  <div class="ib" id="smallJC"></div>
+	  <div class="ib" id="smallDesign"></h3>
+	</li>
+      </ul>
       <div id="content">
-	<div id="services">
+	<div class="section" id="services">
 	  <h1> SERVICES </h1>
 	  <p>     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at leo mauris. Nunc venenatis, erat quis interdum consequat, massa augue viverra velit, nec lacinia nulla massa sed lectus. Nunc venenatis nisl et odio gravida vel tincidunt elit pharetra. Pellentesque nulla erat, auctor gravida sollicitudin id, eleifend a neque. Nullam eu lectus augue. Integer in pretium metus. Quisque vel diam at sem condimentum fermentum. In mattis est ut odio consequat facilisis porta tellus adipiscing. Phasellus vehicula ligula neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam volutpat ornare scelerisque. Sed orci nulla, sagittis eu venenatis sed, tincidunt ut nisl. Aliquam scelerisque viverra hendrerit. Duis nec massa purus.
 
@@ -38,31 +49,45 @@
 	  <p> Praesent gravida sollicitudin turpis, sed vulputate erat elementum non. Fusce metus nibh, fringilla vitae cursus eu, iaculis sit amet erat. Proin ultricies tempor lacinia. Maecenas consequat euismod justo eu fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc enim odio, interdum a cursus nec, egestas vel erat. Morbi lacinia elit et velit suscipit porttitor sagittis mi tempor. Aliquam pulvinar pulvinar hendrerit. Vestibulum dignissim sodales tempor. Maecenas enim ipsum, elementum eget sagittis eget, dapibus a urna. Suspendisse vitae risus vitae elit gravida consequat. Suspendisse gravida lectus eget nulla tempus elementum.
 	</div>
 
-	<div id="projects">
+	<div class="section" id="projects">
 	  <h1> PROJECTS </h1>
-	  <a href="http://site.se">
-	    <div class="projectBox">
-	      <img src="./img/animage.jpg" />
-	      <h5> Description. </h5>
-	    </div>
-	  </a>
-	  <p>Det var en gång en liten tös
+	  <div class="projectMarginFixer">
+	    <a href="http://site.se">
+	      <div class="projectBox">
+		<img src="./img/site.jpg" />
+		<h5> Description. </h5>
+	      </div>
+	    </a>
+	    <a href="http://site.se">
+	      <div class="projectBox">
+		<img src="./img/site.jpg" />
+		<h5> Another description. </h5>
+	      </div>
+	    </a>
+	    <a href="http://site.se">
+	      <div class="projectBox">
+		<img src="./img/site.jpg" />
+		<h5> And yet another one. </h5>
+	      </div>
+	    </a>
+	  </div>
 	</div>
-
-	<div id="contact">
+	<div class="section" id="contact">
 	  <h1> CONTACT </h1>
 	  <h3> A person </h3>
-	  <h4> Derpgatan 27 </h4>
-	  <h4> aperson@jcdesign.se <h4>
+	  <h5> Derpgatan 27 </h5>
+	  <h5> 010 - 598 831 </h5> 
+	  <h5> aperson@jcdesign <h5>
 	  <h3> Some Other Person </h3>
-	  <h4> Hermelingatan 42 </h4> 
-	  <h4> otherperson@jcdesign.se </h4>  
+	  <h5> Hermelingatan 42 </h5> 
+	  <h5> 010 - 598 832 </h5> 
+	  <h5> otherperson@jcdesign </h5>
 	</div>
 
-	<div id="jobs">
+	<div class="section" id="jobs">
 	  <h1> JOBS </h1>
 	  <p> We are not currently looking to hire any additional personel.
-	  <p> On the other hand we are always open to new ideas. If you believe you have anything to offer feel free to shoot us an email to jobs@jcdesign.com.
+	  <p> On the other hand we are always open to new ideas. If you believe you have anything to offer feel free to shoot us an email to jobs@jcdesign.
 	</div>
 
 	<div id="emptyspace"></div>
